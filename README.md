@@ -27,6 +27,10 @@ Swift Package Manager builds may also be made on Linux
 systems. Please see [DOCKER.md](DOCKER.md) and
 [LINUX.md](LINUX.md) for details.
 
+### Supported Platforms
+
+Swift gRPC's platform support is identical to the [platform support of Swift NIO](https://github.com/apple/swift-nio#supported-platforms).
+
 ## CocoaPods integration
 
 Swift gRPC is currently available [from CocoaPods](https://cocoapods.org/pods/SwiftGRPC).
