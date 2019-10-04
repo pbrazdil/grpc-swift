@@ -70,8 +70,11 @@ let package = Package(
               "SwiftProtobuf"]),
     .target(name: "CgRPC",
             dependencies: cGRPCDependencies, 
-            cSettings: [
+            cxxSettings: [
               .headerSearchPath("Sources/BoringSSL/include"),
+            ],
+            linkerSettings: [
+              .linkLibrary("BoringSSL"),
             ]
 ),
     .target(name: "RootsEncoder"),
