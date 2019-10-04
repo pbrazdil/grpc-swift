@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 /*
  * Copyright 2017, gRPC Authors All rights reserved.
  *
@@ -69,7 +69,11 @@ let package = Package(
               "NIOHTTP2",
               "SwiftProtobuf"]),
     .target(name: "CgRPC",
-            dependencies: cGRPCDependencies),
+            dependencies: cGRPCDependencies, 
+            cSettings: [
+              .headerSearchPath("Sources/BoringSSL/include"),
+            ]
+),
     .target(name: "RootsEncoder"),
     .target(name: "protoc-gen-swiftgrpc",
             dependencies: [
